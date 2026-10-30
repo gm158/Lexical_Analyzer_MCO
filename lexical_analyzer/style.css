@@ -1,0 +1,49 @@
+
+/* Header */
+.header {
+    width: 100%;
+    height: 56px;
+    background-color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #374151;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo */
+.logo {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #8ab4ff;
+}
+
+/* Subject title */
+.header-title {
+    color: #d1d5db;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .header {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .header-title {
+        font-size: 10px;
+        text-align: center;
+    }
+}
