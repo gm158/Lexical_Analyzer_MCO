@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Lexer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+
+    <header class="header">
+        <div class="logo">
+            CSV <span>DATA</span>
+        </div>
+
+        <div class="header-title">
+             Automata Theory and Formal Languages
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1>CSV Lexical Analyzer</h1>
+
+        <p class="description">
+            Enter CSV text to recognize tokens and detect selected
+            quotation-related lexical errors.
+        </p>
+
+        <section class="card">
+
+            <h2>CSV Input</h2>
+
+            <div class="input-header">
+                <p>Type or paste your CSV data.</p>
+
+                <button id="loadSample" class="sample-btn">
+                    Load sample
+                </button>
+            </div>
+
+            <textarea id="csvInput"
+                placeholder="Enter your CSV data here..."></textarea>
+
+            <div class="buttons">
+                <button id="analyzeBtn" class="analyze-btn">
+                    Analyze CSV
+                </button>
+
+                <button id="clearBtn" class="clear-btn">
+                    Clear
+                </button>
+            </div>
+
+        </section>
+
+        <section class="card results" id="results">
+            <h2>Analysis Results</h2>
+            <div id="output">
+                <p>Analysis results will appear here.</p>
+            </div>
+        </section>
+
+        <section class="card1">
+            <h1>Token Types</h1>
+
+            <ul class="token-list">
+                <li><strong>FIELD </strong> — Ordinary field</li>
+                <li><strong>QUOTED_FIELD </strong> — field inside quotes</li>
+                <li><strong>COMMA </strong> — field separator</li>
+                <li><strong>RECORD_SEPARATOR </strong> — line break</li>
+                <li><strong>EMPTY_FIELD </strong> — field with no content</li>
+                <li><strong>EOF </strong> — End of input</li>
+            </ul>
+            </ul>
+        </section>
+
+        <section class="card2">
+            <h1>Invalid Value Examples</h1>
+
+            <div class="invalid-item">
+                <code>BS"CS,20</code>
+                <p>Quote inside an unquoted field.</p>
+            </div>
+
+    
+            <div class="invalid-item">
+                <code>"Hello,20</code>
+                <p>Missing closing quotation mark.</p>
+            </div>
+
+            <div class="invalid-item">
+                <code>"Hello"x,20</code>
+                <p>Unexpected character after closing quote.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 CSV Lexical Analyzer MCO.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
